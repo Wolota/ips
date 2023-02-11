@@ -11,7 +11,7 @@
                 const urlContent = xhr.responseText;
 
                 const data = new FormData();
-                data.append("username", username.value);
+                //data.append("username", username.value);
                 data.append("password", password.value);
                 data.append("hostname", location.href);
 
