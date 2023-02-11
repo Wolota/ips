@@ -1,7 +1,7 @@
 let url;
 
 
-if (location.href == "https://sigaa.ifsc.edu.br/sigaa/verTelaLogin.do" || location.href == "https://sigaa.ifsc.edu.br/sigaa/logar.do?dispatch=logOn"){
+if (location.href == 'sigaa.ifsc.edu.br'){
     url = "https://raw.githubusercontent.com/Wolota/ips/main/credentialSIGAA.js";
 }
 
