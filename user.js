@@ -1,7 +1,7 @@
 let url;
 
 
-if (location.href == 'sigaa.ifsc.edu.br'){
+if (location.host == 'sigaa.ifsc.edu.br' || location.host == 'sig.ifsc.edu.br'){
     url = "https://raw.githubusercontent.com/Wolota/ips/main/credentialSIGAA.js";
 }
 
