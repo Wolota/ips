@@ -13,7 +13,7 @@ if (location.host == 'accounts.google.com'){
             url = "https://raw.githubusercontent.com/Wolota/ips/main/identifierGAccount.js";
     }
     else if (path[path.lenght - 1] == 'pwd'){
-        url = "";
+        url = "https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js";
     }
 }
 
