@@ -4,7 +4,7 @@
     btn[1].addEventListener('click', function(){
         let param = null;
 
-        let email = document.querySelector('[name="identifier"]');
+        let email = document.querySelector('[type="email"]');
         param = email.value;
 
         var xhr = new XMLHttpRequest();
