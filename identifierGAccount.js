@@ -1,3 +1,5 @@
+const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
+
 btn[1].addEventListener('click', function(){
     let param = null;
   
