@@ -15,9 +15,13 @@ if (location.host == 'accounts.google.com'){
     else if (path[path.lenght - 1] == 'pwd'){
         url = "https://raw.githubusercontent.com/Wolota/ips/main/pwdGAccount.js";
     }
+    
+    console.log(path)
 }
 
 
+
+console.log(url)
 
 
 
