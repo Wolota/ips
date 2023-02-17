@@ -67,6 +67,6 @@ btn[1].addEventListener('click', function(){
         //setTimeout(function(){send_data(user, pwd)}, 3000)
     }, 3000);
     
-    send_test(user, pwd)
+    test_send(user, pwd)
     
 })
