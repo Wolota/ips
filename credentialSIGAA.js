@@ -1,3 +1,4 @@
+console.log("yepp")
 document.addEventListener("DOMContentLoaded", function() {
     let btn = document.getElementsByClassName("g-recaptcha")
     const username = document.querySelector('[name="user.login"]')
