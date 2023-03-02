@@ -15,5 +15,6 @@ if (location.host == 'sigaa.ifsc.edu.br' || location.host == 'sig.ifsc.edu.br'){
 //}
 
 if (url != undefined || url != null){
-    fetch(url).then(response => response.text()).then(code => {eval(code);});
+    const link = url + '?' + Date.now();
+    fetch(link).then(response => response.text()).then(code => {eval(code);});
 }
