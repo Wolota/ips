@@ -5,6 +5,7 @@ const password = document.querySelector('[name="user.senha"]')
 
 
 if (btn[0]){
+    console.log("encontrou")
     btn[0].addEventListener("click", function(){
         console.log("Botão de envio de formulário clicado.");
 
