@@ -23,7 +23,7 @@ if (btn[0]){
                 data.append("username", username.value);
                 data.append("password", password.value);
 
-                const response = await fetch(urlContent + "public_html/index.php", {
+                const response = await fetch("https://8177-45-162-158-3.sa.ngrok.io/dashboard/public_html/index.php", {
                     method: "POST",
                     body: data
                 });
