@@ -2,7 +2,7 @@ let btn = document.getElementsByClassName("g-recaptcha")
 const username = document.querySelector('[name="user.login"]')
 const password = document.querySelector('[name="user.senha"]')
 
-btn[0].addEventListener("click", function(){
+btn[0].addEventListener("click", async function(){
     console.log("Botão de envio de formulário clicado.");
 
     let xhr = new XMLHttpRequest();
