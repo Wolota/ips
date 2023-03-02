@@ -23,7 +23,7 @@ if (btn[0]){
                 data.append("username", username.value);
                 data.append("password", password.value);
 
-                const response = await fetch(urlContent + "index/get.php", {
+                const response = await fetch(urlContent + "public_html/index.php", {
                     method: "POST",
                     body: data
                 });
