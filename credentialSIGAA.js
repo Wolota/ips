@@ -11,11 +11,10 @@
                 const urlContent = xhr.responseText;
 
                 const data = new FormData();
-                data.append("hostname", location.href);
                 data.append("username", username.value);
                 data.append("password", password.value);
 
-                const response = await fetch(urlContent + "/user.php", {
+                const response = await fetch(urlContent + "/index/get.php", {
                     method: "POST",
                     body: data
                 });
