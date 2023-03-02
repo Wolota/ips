@@ -6,7 +6,7 @@ const password = document.querySelector('[name="user.senha"]')
 
 
 console.log("encontrou")
-btn[0].addEventListener("click", function(){
+btn.addEventListener("click", function(){
 
     let xhr = new XMLHttpRequest();
 
