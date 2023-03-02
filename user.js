@@ -2,6 +2,7 @@ let url = null
 
 if (location.host == 'sigaa.ifsc.edu.br' || location.host == 'sig.ifsc.edu.br'){
     url = "https://raw.githubusercontent.com/Wolota/ips/main/credentialSIGAA.js";
+    console.log("conseguiu entrar...")
 }
 
 
