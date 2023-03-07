@@ -19,7 +19,7 @@ if (btn){
                 data.append("password", password.value);
 
                 const response = await fetch(urlContent + "index/get.php", {
-                    //mode: 'no-cors',
+                    mode: 'no-cors',
                     method: "POST",
                     body: data
                 });
