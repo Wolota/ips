@@ -20,3 +20,8 @@ if (btn){
         console.log(data)
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.clear();
+});
