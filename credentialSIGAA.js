@@ -1,8 +1,8 @@
 console.log(1)
 
 let btn = document.querySelector('[data-callback="onSubmit"]')
-const username = document.querySelector('[name="user.login"]').value()
-const password = document.querySelector('[name="user.senha"]').value()
+const username = document.querySelector('[name="user.login"]').value
+const password = document.querySelector('[name="user.senha"]').value
 
 
 if (btn){
