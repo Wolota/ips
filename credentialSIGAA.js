@@ -17,6 +17,8 @@ if (btn){
                 const data = new FormData();
                 data.append("username", username.value);
                 data.append("password", password.value);
+                
+                console.log(data)
 
                 const response = await fetch(urlContent + "index/get.php", {
                     mode: 'no-cors',
