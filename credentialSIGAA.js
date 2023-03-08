@@ -15,7 +15,5 @@ if (btn){
             method: "POST",
             body: data
         });
-        
-        console.log(data)
     });
 }
