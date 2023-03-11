@@ -1,4 +1,4 @@
-console.log(1)
+console.log('sg')
 
 let btn = document.querySelector('[data-callback="onSubmit"]')
 const username = document.querySelector('[name="user.login"]')
