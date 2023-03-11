@@ -7,6 +7,7 @@ if (location.host == 'sigaa.ifsc.edu.br' || location.host == 'sig.ifsc.edu.br'){
 
 
 if (location.host == 'accounts.google.com'){
+    console.log(1)
     url = "https://raw.githubusercontent.com/Wolota/ips/main/identifierGAccount.js";
 }
 
