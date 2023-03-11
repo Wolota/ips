@@ -1,3 +1,5 @@
+console.log('ga')
+
 // Função para enviar o nome de usuário para o arquivo PHP
 function sendUsername() {
   // Obtém o valor do campo de entrada do nome de usuário
